@@ -53,5 +53,6 @@ const searchCard = async (req, res) => {
 
 module.exports = {
     getAllCards,
-    searchCard
+    searchCard,
+    getCard
 }
