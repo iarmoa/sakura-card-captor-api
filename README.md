@@ -4,10 +4,9 @@ Endpoint: https://sakura-card-captor-api-production.up.railway.app/api/
 
 |       HTTP METHOD            |               GET             |
 |------------------------------|-------------------------------|
-|       api/cards/list         |       List all the cards      |
-|       api/cards/:id         |       Search by id            |
-|       api/cards/search       |       Search by name          |
-|       api/health             |       Just a healthcheck      |
+|       cards/list         |       List all the cards      |
+|       cards/:id         |       Search by id            |
+|       cards/search       |       Search by name          |
 
 ## api/cards/list
 This call will return a list of objects as it follows:
@@ -23,10 +22,14 @@ This call will return a list of objects as it follows:
         "clowCardImg": "https://static.wikia.nocookie.net/ccs/images/7/72/ClowEarthy.jpg/revision/latest?cb=20220525093735",
         "sakuraCardImg": "https://static.wikia.nocookie.net/ccs/images/9/94/SakuraEarthy.jpg/revision/latest?cb=20160527123729"
     }
+    ...
 ]
 ```
 
-## api/cards/list
+## api/cards/:id
+If you know the id just send it to the url
+
+## api/cards/search
 You could make a search by name. The input could be an strign and the endpoint will return a list of elements that contains the "q" parameter
 * Example with enpoint https://sakura-card-captor-api-production.up.railway.app/api/search?q=gh
 

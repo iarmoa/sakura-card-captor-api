@@ -1,8 +1,8 @@
-const card = require("../models/Card");
+const cardModel = require("../models/Card");
 
 const getAllCards = async (req, res) => {
     try{
-        const cards = await card.find();
+        const cards = await cardModel.find();
         res.json([...cards]);
     } catch (error){
         console.error(error);
@@ -13,7 +13,7 @@ const getAllCards = async (req, res) => {
 const getCard = async (req, res) => {
     try{
         const id = req.params.id;
-        const card = await card.findById(id);
+        const card = await cardModel.findById(id);
 
         if(card == null){
             res.status(201).json({ message: "Id not found" });
@@ -41,7 +41,7 @@ const searchCard = async (req, res) => {
         }
     }
 
-    results = await card.find(query);
+    results = await cardModel.find(query);
     if(!results.length){
         res.status(201).json({ message: "No cards found with that criteria"});
         return;

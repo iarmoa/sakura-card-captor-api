@@ -10,8 +10,8 @@ connectDB();
 const router = express.Router();
 
 router.get('/list', cardController.getAllCards);
-router.get('/:id', cardController.getCard);
 router.get('/search', cardController.searchCard);
+router.get('/:id', cardController.getCard);
 
 router.get('/health', (req, resp) => resp.status(200))
 app.use("/api/cards", router)
