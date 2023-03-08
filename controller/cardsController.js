@@ -10,6 +10,23 @@ const getAllCards = async (req, res) => {
     }
 }
 
+const getCard = async (req, res) => {
+    try{
+        const id = req.params.id;
+        const card = await card.findById(id);
+
+        if(card == null){
+            res.status(201).json({ message: "Id not found" });
+            return;
+        }
+
+        res.json(card);
+    } catch (error){
+        console.error(error);
+        res.status(500).json({ message: "Internal server error"});
+    }
+}
+
 const searchCard = async (req, res) => {
     const nameCriteria = req.query.q;
     if(!nameCriteria){
