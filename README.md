@@ -68,9 +68,9 @@ You could make a search by name. The input could be an strign and the endpoint w
 `name`: Name impress on the card <br/>
 `kanji`: Kanji impress on the card<br/>
 `sign`: Which sign has domain over the card `Sun | Moon | Star`<br/>
-`hierarchy`: Under which hierarchy of card `The Firey | The The Light | The Dark | The Earthy | The Watery | The Windy | Unknown`
-`clowCardImg`: URL of clow card version
-`sakuraCardImg`: URL of sakura card vesion
+`hierarchy`: Under which hierarchy of card `The Firey | The The Light | The Dark | The Earthy | The Watery | The Windy | Unknown`<br/>
+`clowCardImg`: URL of clow card version<br/>
+`sakuraCardImg`: URL of sakura card vesion<br/>
 
 # Why this api?
 Just for fun and learning reasons 
