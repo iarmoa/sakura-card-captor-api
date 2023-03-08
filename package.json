@@ -4,7 +4,7 @@
   "description": "Sakura API which retrieves all the cards information",
   "main": "index.js",
   "scripts": {
-    "development": "set NODE_ENV=dev&& node server.js",
+    "dev": "set NODE_ENV=dev&& node server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
